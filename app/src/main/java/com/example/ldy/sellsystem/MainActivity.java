@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.app.FragmentManager fragmentManger = getFragmentManager();
     private Stack<Integer> stack = new Stack<>();
     private Typeface typeface;
-
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initAttr() {
+        toolbar=(Toolbar)findViewById(R.id.toolbar);
         shoppingcar_down_tv.setTypeface(this.typeface);
         setting_down_tv.setTypeface(this.typeface);
         myorder_down_tv.setTypeface(this.typeface);
@@ -217,6 +218,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 home_down_tv.setTextColor(ORANGECOLOR);
                 home_up_image.setColorFilter(ORANGECOLOR);
                 replaceFragment(fragments.get(0));
+                toolbar.setVisibility(View.VISIBLE);
                 stack.clear();
                 pushToStack(0);
                 break;
@@ -224,11 +226,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 initTabColor();
                 shoppingcar_down_tv.setTextColor(ORANGECOLOR);
                 shoppingcar_up_image.setColorFilter(ORANGECOLOR);
+                toolbar.setVisibility(View.GONE);
                 replaceFragment(fragments.get(1));
                 stack.push(1);
                 break;
             case R.id.linear_order:
                 initTabColor();
+                toolbar.setVisibility(View.GONE);
                 myorder_down_tv.setTextColor(ORANGECOLOR);
                 myorder_up_image.setColorFilter(ORANGECOLOR);
                 replaceFragment(fragments.get(2));
@@ -236,6 +240,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.linear_setting:
                 initTabColor();
+                toolbar.setVisibility(View.GONE);
                 setting_down_tv.setTextColor(ORANGECOLOR);
                 setting_up_image.setColorFilter(ORANGECOLOR);
                 replaceFragment(fragments.get(3));

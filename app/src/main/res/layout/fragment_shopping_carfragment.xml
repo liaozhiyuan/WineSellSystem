@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
         <LinearLayout
-            android:id="@+id/top_bar"
+            android:id="@+id/top_bar_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@android:color/white"
@@ -21,7 +21,7 @@
                 android:background="@android:color/transparent"
                 android:orientation="vertical" >
                 <ImageView
-                    android:id="@+id/back"
+                    android:id="@+id/back_imgview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -29,7 +29,7 @@
                     android:padding="10dp"
                     android:src="@drawable/back" />
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/title_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -38,7 +38,7 @@
                     android:textColor="#1a1a1a"
                     android:textSize="16sp" />
                 <TextView
-                    android:id="@+id/subtitle"
+                    android:id="@+id/changeTheItem_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -73,7 +73,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="4dp"
-                android:button="@drawable/checkbox"
+                android:background="@drawable/checkbox"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center"
                 android:minHeight="64dp"
@@ -82,7 +82,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 />
             <LinearLayout
-                android:id="@+id/ll_info"
+                android:id="@+id/ll_info_Linearlayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"

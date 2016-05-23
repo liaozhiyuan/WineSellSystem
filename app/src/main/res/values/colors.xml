@@ -6,4 +6,5 @@
     <color name="colorBottombarGray">#5b5a4f</color>
     <color name="colorBottombarOrange">#ff4e1a</color>
     <color name="colormainWhite">#ffffff</color>
+    <color name="colorgray">#f5f1f1</color>
 </resources>
