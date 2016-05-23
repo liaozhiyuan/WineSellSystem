@@ -115,12 +115,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             initTabColor();
             up_Images.get(top).setColorFilter(ORANGECOLOR);
             down_Texts.get(top).setTextColor(ORANGECOLOR);
+            if(top==0)
+                toolbar.setVisibility(View.VISIBLE);
 
 
         }
     }
 
     private void initTabColor() {
+
         home_down_tv.setTextColor(GRAYCOLOR);
         myorder_down_tv.setTextColor(GRAYCOLOR);
         setting_down_tv.setTextColor(GRAYCOLOR);
